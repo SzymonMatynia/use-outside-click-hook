@@ -17,7 +17,7 @@ const ExampleComponent = () => {
 
   return (
     <div ref={ref}>
-      {isClicked ? 'Clicked outside' : 'Click outside'}
+      {isClicked ? 'Clicked outside' : 'Waiting for click outside'}
     </div>
   );
 };
