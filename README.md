@@ -9,10 +9,9 @@ import React from 'react';
 import useOutsideClick from 'react-outside-click-hook';
 
 const ExampleComponent = () => {
-  const ref = React.useRef(null);
   const [show, setIsClicked] = React.useState(false);
 
-  useOutsideClick(ref, () => {
+  const ref = useOutsideClick(() => {
     setIsClicked(true);
   });
 
