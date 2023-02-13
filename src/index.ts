@@ -1,12 +1,11 @@
 import {LegacyRef, useEffect, useRef} from 'react';
 
-type RefType = LegacyRef<any>;
-const useOutsideClick = (callback: () => void) => {
-  const ref: RefType = useRef<HTMLElement | null>(null);
+const useOutsideClick = (handler: () => void): LegacyRef<HTMLElement> => {
+  const ref = useRef<HTMLElement | null>(null);
   useEffect(() => {
-    const handleClick = (event: MouseEvent) => {
-      if (ref?.current && !ref.current.contains(event.target)) {
-        callback();
+    const handleClick = ({target}: MouseEvent) => {
+      if (ref?.current && !ref.current.contains(target as Node)) {
+        handler();
       }
     };
 
