@@ -1,6 +1,6 @@
 {
   "name": "use-outside-click-hook",
-  "version": "0.0.53",
+  "version": "0.0.54",
   "description": "React use outside click hook. It's a simple hook that allows you to detect clicks outside of a component.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

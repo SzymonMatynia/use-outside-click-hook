@@ -5,11 +5,11 @@ React use outside click hook. It's a simple hook that allows you to detect click
 # Simple example
 
 ```js
-import React from 'react';
-import useOutsideClick from 'react-outside-click-hook';
+import {useState} from 'react';
+import useOutsideClick from 'use-outside-click-hook';
 
 const ExampleComponent = () => {
-  const [show, setIsClicked] = React.useState(false);
+  const [show, setIsClicked] = useState(false);
 
   const ref = useOutsideClick(() => {
     setIsClicked(true);
